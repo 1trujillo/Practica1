@@ -17,6 +17,7 @@ import com.example.bibliotecaduoc.service.LibroService;
 
 
 
+
 @RestController
 @RequestMapping("/api/v1/libros")
 public class LibroController {
@@ -47,6 +48,10 @@ public class LibroController {
     public String eliminarLibro(@PathVariable int id){
         return libroService.deleteLibro(id);
     }
+    @GetMapping("/total")
+    public int totalLibrosV2(){
+        return libroService.totaLibrosV2();}
+    
     
     
 

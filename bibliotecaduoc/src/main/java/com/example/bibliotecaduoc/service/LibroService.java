@@ -35,5 +35,13 @@ public class LibroService {
         return "Libro eliminado";
     }
 
+    public int totaLibrosV1(){
+        return libroRepository.obtenerLibros().size();
+    }
+
+    public int totaLibrosV2(){
+        return libroRepository.totalLibros();
+    }
+
 
 }
